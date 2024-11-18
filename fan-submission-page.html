@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Meta tags for SEO and description of my website -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Crazy4Cars - Explore our fan-submitted cars. Submit your car for a chance to be featured!">
+<meta name="keywords" content="driving, fanpage, submission, cars, modification, racing">
+<meta name="author" content="Cormac Cullen Doyle">
+<title>Crazy4Cars! - Fan Car Submissions</title>
+<link rel="stylesheet" href="crazy4cars-design.css">
+</head>
+
+<body>
+
+<!-- Header section, main title, and navigation links that link to my other pages. This aligns with the homepage -->
+<header>
+<h1 class="site-title">Crazy4Cars! - Fan Submitted Cars </h1>
+<p>&#128171; The Ultimate Hub for Car Content! &#128171;</p> 
+<nav> <a href="index.html"><b>Featured Cars</a> &nbsp; &nbsp; <a href="fan-car-page.html">Fan Submitted Cars</a> &nbsp; &nbsp; <a href="plan-your-drive-page.html">Plan Your Next Cruise</a></b></nav>
+</header>
+
+<!-- This section contains the fan submitted car slideshow --> 
+<div>
+<h2>Fan Car Submission Slideshow</h2>
+    
+<div class="slideshow-container">
+        
+<!-- Slide 1 contains a picture of a fans Fiesta ST -->
+<div class="slide">
+<img src="images/Fan-st.jpg" alt="Fan Submitted Fiesta ST with widebody kit">
+<p> <b> <i> John Porks Fiesta ST </i> </b> </p>
+</div>
+ 
+ <!-- Slide 2 contains a picture of a fans McLaren P1 -->       
+<div class="slide">
+<img src="images/fan-f1.jpg" alt="Fan Submitted McLaren P1">
+<p> <b> <i> Angelina Doyles McLaren P1 </i> </b> </p>
+</div>
+
+<!-- Slide 3 contains a picture of a fans BMW M2 -->
+<div class="slide">
+<img src="images/fan-m2.jpg" alt="Fan Submitted BMW M2">
+<p> <b> <i> Brian McGloughlins BMW M2 </i> </b> </p>
+</div>
+
+<!-- Slide 4 contains a picture of a fans Toyota Supra -->
+<div class="slide">
+<img src="images/fan-supra.jpeg" alt="Fan Submitted Toyota Supra">
+<p> <b> <i> Arun Acharis Toyota Supra </i> </b> </div>
+</div>
+        
+<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+<a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<!-- JavaScript for fan car slideshow functionality -->
+<script>
+var currentSlide = 0;
+function changeSlide(n) {
+var slides = document.getElementsByClassName("slide");
+slides[currentSlide].style.display = "none";  // Hides the current slide
+currentSlide += n;  // Allows movement to next or previous slide
+if (currentSlide >= slides.length) currentSlide = 0;
+if (currentSlide < 0) currentSlide = slides.length - 1;
+slides[currentSlide].style.display = "block";  // Shows a new slide
+}
+
+window.onload = function() {
+var slides = document.getElementsByClassName("slide");
+slides[currentSlide].style.display = "block";  // Shows the first slide when the website is loaded
+};
+</script>
+
+<br>
+
+<!-- Integrates and displays a Youtube video -->
+<div class="video-section">
+<h2> &darr; Last Years Fan Car Winner! &darr; </h2>
+<iframe width="700" height="400" src="https://www.youtube.com/embed/c6PQ26-pM_Q?si=i2gJ46azRAbKd4Ev" title="Weekly Featured Car Review" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br> <br>
+
+<!-- Complex form for users to submit their cars -->
+<h3> Submit Your Car Here For A Chance To Be Featured: </h3>
+<form>
+<label for="name">Your Name:</label>
+<input type="text" id="name" name="name"><br><br>
+
+<label for="email">Your Email:</label>
+<input type="email" id="email" name="email"><br><br>
+
+<label for="subject">Car Make & Model:</label>
+<input type="text" id="subject" name="subject"><br><br>
+
+<label for="car-photo">Upload a Photo of Your Car:</label>
+<input type="file" id="car-photo" name="car-photo" accept="image/*"><br><br>
+
+<input type="submit" value="Submit">
+</form>
+
+<!-- JavaScript for form submission alert to appear when submit is clicked -->
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+window.alert("Thank you for your submission!");
+});
+</script>
+
+<br> <br>
+
+<!-- Footer contains the copyright information for the page -->
+<footer>
+<p>&copy; 2024 Crazy4Cars - The Home Of Quality Car Content. <br> <br> Created by Cormac Cullen Doyle </p>
+</footer>
+
+</body>
+
+
+</html>

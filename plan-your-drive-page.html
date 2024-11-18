@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Meta tags for SEO and description of my website -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plan your next drive with our interactive map.">
+<meta name="keywords" content="driving, map, route, travel, racetrack">
+<meta name="author" content="Cormac Cullen Doyle">
+<title>Crazy4Cars! - Plan Your Next Cruise</title>
+<link rel="stylesheet" href="crazy4cars-design.css">
+</head>
+
+<body>
+
+<!-- Header section, main title, and navigation links that link to my other pages. This aligns with the homepage -->
+<header>
+<h1>Crazy4Cars! - Plan Your Next Cruise</h1>
+
+<p>&#128171; The Ultimate Hub for Car Content! &#128171;</p>
+
+<nav> <b><a href="index.html">Featured Cars</a> &nbsp; &nbsp; <a href="fan-submission-page.html">Fan Submitted Cars</a> &nbsp; &nbsp; <a href="plan-your-drive-page.html">Plan Your Next Cruise</b></a></nav>
+</header>
+
+<br>
+
+<h2>Plan Your Next Cruise Using Our Map! </h2>
+
+<!-- JavaScript function to initialise the Map -->
+<script>
+function initMap() {
+var mapOptions = {
+center: { lat: 53.2582, lng: -6.7463 },  
+zoom: 17
+};
+var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+</script>
+
+
+
+<!-- This is my Google Maps API, along with a container for the map -->
+<div id="map"> </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZC47z2yaaW3hSSAidrVDfKmVdKVIAtxU&callback=initMap"> </script>
+
+<br> <br>
+
+<!-- Popular destinations list -->
+<h3> &darr; Popular Destinations for Car Enthusiasts &darr; </h3>
+ <ul>
+    <li> <b> Mondello Park </b> - Ireland's only international motorsport venue!
+    <li> <b> Kilgarvin Motor Museum </b> - See astounding examples of the best classic cars! 
+    <li> <b> Kylemore Karting </b> - Take an exhilirating drive around the track in a go-kart! 
+</ul>
+
+<br> <br>
+
+<!-- Footer contains the copyright information for the page -->
+<footer>
+<p>&copy; 2024 Crazy4Cars - The Home Of Quality Car Content. <br> <br> Created by Cormac Cullen Doyle </p>
+</footer>
+
+</body>
+
+</html>
+
